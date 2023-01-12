@@ -33,7 +33,7 @@ func isHashableObj(obj interface{}) bool {
 	}
 }
 
-func isNativeHashableObj(obj any) bool {
+func isNativeHashableObj(obj interface{}) bool {
 	if !isHashableObj(obj) {
 		return false
 	}
@@ -44,7 +44,7 @@ func isNativeHashableObj(obj any) bool {
 		return true
 	}
 }
-func calcHash(obj any) (string, error) {
+func calcHash(obj interface{}) (string, error) {
 	if !isHashableObj(obj) {
 		return "", errors.New("obj is not a hashable object, can't calculate its hash")
 	}

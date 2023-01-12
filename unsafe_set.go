@@ -22,12 +22,12 @@ import (
 )
 
 type ThreadUnsafeSet struct {
-	dat map[string]any // Store {$hash: $value} of elem
-	typ reflect.Type   // Set's data type
+	dat map[string]interface{} // Store {$hash: $value} of elem
+	typ reflect.Type           // Set's data type
 }
 
 func newThreadUnsafeSet() ThreadUnsafeSet {
-	return ThreadUnsafeSet{dat: map[string]any{}, typ: nil}
+	return ThreadUnsafeSet{dat: map[string]interface{}{}, typ: nil}
 }
 
 func (set *ThreadUnsafeSet) Add(val interface{}) bool {
