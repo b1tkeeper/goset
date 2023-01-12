@@ -201,11 +201,16 @@ func (set *ThreadUnsafeSet) Remove(i interface{}) {
 func (set *ThreadUnsafeSet) String() string {
 	var builder strings.Builder
 	builder.WriteString("goset.ThreadUnsafeSet{ ")
+	atLeastOnce := false
 	for _, obj := range set.dat {
-		builder.WriteString(fmt.Sprintf("%v", obj))
+		builder.WriteString(fmt.Sprintf("%v, ", obj))
+		atLeastOnce = true
 	}
-	builder.WriteString(" }")
-	return builder.String()
+	ret := builder.String()
+	if atLeastOnce {
+		ret = ret[:len(ret)-2]
+	}
+	return ret + " }"
 }
 
 func (set *ThreadUnsafeSet) SymmetricDifference(other Set) Set {

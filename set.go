@@ -165,7 +165,7 @@ func NewSet(vals ...interface{}) Set {
 
 // NewThreadUnsafeSet creates and returns a new set with the given elements.
 // Operations on the resulting set are not thread-safe.
-func NewThreadUnsafeSet_(vals ...interface{}) Set {
+func NewThreadUnsafeSet(vals ...interface{}) Set {
 	s := newThreadUnsafeSet()
 	for _, item := range vals {
 		s.Add(item)
