@@ -1,9 +1,9 @@
 # goset
-A Fast、Thread-Safe、Portable set that can store any object for Golang
+A Fast、Thread-Safe、Portable set that can store any object in Golang
 
 ## Principles
-1. Store Any Object: Due to the lack of functionality of Golang generics, the common set libraries only support basic types (references to golang comparable), goset would support any custom types.
-2. Portable: goset ditches weak generic of golang, so that can downward compatible with more versions
+1. Store Any Object: Due to the incomplete function of Golang's generics, the commonly used set library only supports storing the basic types in Golang (reference to comparable type constrait in Golang), but goset will support any objects of any custom type.
+2. Portable: goset ditches weak generic function of golang and any keyword, to downward compatible with more versions (Goals: go 1.10 Windows XP)
 3. Fast: No particular performance loss
 
 ## Usage
