@@ -2,7 +2,7 @@
 A Fast、Thread-Safe、Portable for Golang
 
 ## Principles
-1. Support Custom Type: Due to the lack of functionality of Golang generics, the common set libraries only support basic types (references to golang comparable), goset will support custom types.
+1. Store Any Object: Due to the lack of functionality of Golang generics, the common set libraries only support basic types (references to golang comparable), goset would support any custom types.
 2. Portable: goset ditches weak generic of golang, so that can downward compatible with more versions
 3. Fast: No particular performance loss
 
