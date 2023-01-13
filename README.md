@@ -5,6 +5,7 @@ A Fast、Thread-Safe、Portable set that can store any object in Golang
 1. Store Any Object: Due to the incomplete function of Golang's generics, the commonly used set library only supports storing the basic types in Golang (reference to comparable type constrait in Golang), but goset will support any objects of any custom type.
 2. Portable: goset ditches weak generic function of golang and any keyword, to downward compatible with more versions (Goals: go 1.10 Windows XP)
 3. Fast: No particular performance loss
+4. Has the same interface as [golang-set](https://github.com/deckarep/golang-set): If you want to store custom objects, or don't want to use generics, you can seamlessly migrate to goset
 
 ## Usage
 
